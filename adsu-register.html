@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="PREMS, Personal Record Management System" />
+    <meta
+      name="description"
+      content="Adamawa State University Personal Record System"
+    />
+    <title>Personal Record Management System</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/adsu-logo-half.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="">
+      <section class="container">
+        <a href="index.html" class="logo desktop"
+          ><img src="./assets/img/adsu-logo.png" alt="Site Logo"
+        /></a>
+        <a href="index.html" class="logo mobile"
+          ><img src="./assets/img/adsu-logo-half.jpg" alt="Site Logo"
+        /></a>
+        <button class="bars">&#9776;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mail.html">Mails</a></li>
+            <li>
+              <a href="adsu-register.html" class="active">ADSU Register</a>
+            </li>
+            <li><a href="staff-evaluation.html">Staff Evaluation</a></li>
+            <li class="dropdown">
+              <a href="#">Forms</a>
+              <section class="dropdown-content">
+                <a href="#">Form 1</a>
+                <a href="#">Form 2</a>
+                <a href="#">Form 3</a>
+                <a href="#">Form 4</a>
+                <a href="#">Form 5</a>
+              </section>
+            </li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <!-- End Header -->
+    <!-- Main -->
+    <main>
+      <article class="container h-80svh">
+        <section class="login">
+          <h3 class="login__title">ADSU Register Login</h3>
+          <div class="alert --alert-danger">
+            <p>Wrong Email or Password</p>
+          </div>
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                placeholder="Enter Your Password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Show Password</label>
+              <input type="checkbox" name="show-password" />
+            </div>
+            <div class="form-group">
+              <button type="submit">Login</button>
+            </div>
+          </form>
+        </section>
+      </article>
+    </main>
+    <!-- End Main -->
+
+    <!-- Footer -->
+    <footer>
+      <section class="container">
+        <p>
+          Copyright&copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Personal Record Management System. All rights reserved.
+        </p>
+      </section>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JavaScript Files -->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

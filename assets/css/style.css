@@ -1,0 +1,411 @@
+/* FONT */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.woff"),
+    url("../fonts/Roboto/Roboto-Italic.woff"),
+    url("../fonts/Roboto/Roboto-Bold.woff");
+}
+/* END FONT */
+
+/* CSS VARIABLES */
+:root {
+  --primary-color: #313100;
+  --secondary-color: #ffb900;
+  --secondary-color-2: #f1e0b0;
+  --black: #1c1c19;
+  --black-75: #555555;
+  --black-50: #8d8d8d;
+  --black-25: #c6c6c6;
+  --black-10: #e8e8e8;
+  --black-5: #f3f3f3;
+  --white: #ffffff;
+}
+/* END CSS VARIABLES */
+
+/* GLOBAL CSS */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.alert.--alert-danger {
+  background: hsla(0, 91%, 67%, 0.5);
+  color: red;
+}
+
+.alert.--alert-success {
+  background: hsla(110, 91%, 67%, 0.5);
+  color: green;
+}
+
+.login {
+  width: 100%;
+  margin-inline: auto;
+  margin-block-start: 5rem;
+  padding: 1rem;
+  box-shadow: 0 0 3px var(--black-10);
+  border-radius: 1rem;
+}
+
+.login__title {
+  margin-block: 1.2rem;
+}
+
+button[type="submit"] {
+  font-size: 0.9rem;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  background: var(--secondary-color);
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-color);
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--black-50);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--secondary-color);
+}
+
+input::placeholder {
+  color: var(--black-25);
+}
+
+.form-group {
+  width: 100%;
+  margin: 1em auto;
+}
+
+.form-control {
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: var(--black-75);
+  border-radius: 0.5rem;
+  padding: 1em 1.5em;
+  border: 0.1rem solid var(--black-5);
+}
+
+/* END GLOBAL CSS */
+
+/* UTILITY CLASSES */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.h-5svh {
+  min-height: 5svh;
+}
+
+.h-10svh {
+  min-height: 10svh;
+}
+
+.h-15svh {
+  min-height: 15svh;
+}
+
+.h-20svh {
+  min-height: 20svh;
+}
+
+.h-25svh {
+  min-height: 25svh;
+}
+
+.h-80svh {
+  min-height: 80svh;
+}
+/* END UTILITY CLASSES */
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--black-10);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+header li a {
+  color: var(--black-75);
+}
+
+header li a:hover,
+header li a.active {
+  color: var(--secondary-color);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: max-content;
+  background: var(--white);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 0.5rem 2rem;
+}
+
+header a.desktop,
+.bars {
+  display: none;
+}
+
+header .mobile img {
+  max-width: 50px;
+  height: 50px;
+  margin-block-start: 10px;
+}
+/* End Header */
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, var(--secondary-color-2), var(--white));
+}
+
+.hero-text h3 {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--secondary-color);
+
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+}
+/* End Hero */
+
+/* Footer */
+footer {
+  color: var(--black-75);
+  background: var(--white);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--black-10);
+}
+/* End Footer */
+
+/* MEDIA QUERY MOBILE */
+@media screen and (width < 600px) {
+  header {
+    height: 12svh;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  header .container {
+    position: relative;
+  }
+
+  .bars {
+    display: block;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 50px;
+    margin-block-start: 20px;
+    position: absolute;
+    border: 0;
+    background: inherit;
+    right: 0;
+    top: 0;
+  }
+
+  header nav {
+    margin-block-start: 20px;
+    border-top: 1px solid var(--black-25);
+    padding-top: 10px;
+  }
+
+  header nav li a {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 5px 0;
+  }
+
+  header.show-nav {
+    height: 100vh;
+    background: rgb(238, 238, 231);
+  }
+
+  .hero .hero-text {
+    text-align: center;
+    padding-block: 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+}
+
+.about {
+  text-align: justify;
+}
+
+:has(.about) h2 {
+  margin-block: 1rem;
+  text-align: center;
+}
+
+/* MEDIA QUERY DESKTOP */
+@media screen and (min-width: 600px) {
+  /* Header */
+  header a.mobile {
+    display: none;
+  }
+  header a.desktop {
+    display: block;
+  }
+
+  header section {
+    display: flex;
+    align-items: center;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  header nav {
+    flex-basis: 55%;
+    margin-left: 15%;
+  }
+
+  header section nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* End Header */
+
+  /* Hero */
+  .hero > section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+  }
+
+  .hero figure {
+    flex-grow: 1;
+  }
+
+  .hero-text {
+    width: 50%;
+  }
+  .hero-text h1 {
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  /* End Hero */
+
+  /* About Page */
+  .about {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+
+  :has(.about) h2 {
+    text-align: justify;
+  }
+  :has(.about) p {
+    margin-bottom: 2rem;
+  }
+  /* End About Page */
+
+  /* Login */
+
+  .login {
+    width: 40%;
+    max-width: 600px;
+  }
+}
+
+/*END MEDIA QUERY DESKTOP */
