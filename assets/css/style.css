@@ -321,6 +321,10 @@ footer {
     margin-bottom: 10px;
     line-height: 1.5;
   }
+  .login {
+    position: relative;
+    bottom: 12vh;
+  }
 }
 
 .about {
@@ -330,11 +334,6 @@ footer {
 :has(.about) h2 {
   margin-block: 1rem;
   text-align: center;
-}
-
-.login {
-  position: relative;
-  bottom: 12vh;
 }
 
 /* MEDIA QUERY DESKTOP */
