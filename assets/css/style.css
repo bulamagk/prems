@@ -96,7 +96,7 @@ ul {
   margin-inline: auto;
   margin-block-start: 5rem;
   padding: 1rem;
-  box-shadow: 0 0 3px var(--black-10);
+  box-shadow: 0 0 3px var(--black-25);
   border-radius: 1rem;
 }
 
@@ -127,7 +127,7 @@ input[type="checkbox"] {
 }
 
 input::placeholder {
-  color: var(--black-25);
+  color: var(--black-50);
 }
 
 .form-group {
@@ -330,6 +330,11 @@ footer {
 :has(.about) h2 {
   margin-block: 1rem;
   text-align: center;
+}
+
+.login {
+  position: relative;
+  bottom: 12vh;
 }
 
 /* MEDIA QUERY DESKTOP */
