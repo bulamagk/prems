@@ -256,6 +256,12 @@ header .mobile img {
 }
 /* End Hero */
 
+/* About */
+.about {
+  color: var(--black-75);
+}
+/* End About */
+
 /* Footer */
 footer {
   color: var(--black-75);
